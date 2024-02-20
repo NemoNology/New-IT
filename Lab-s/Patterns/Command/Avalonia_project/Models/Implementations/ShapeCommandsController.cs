@@ -6,7 +6,7 @@ namespace Avalonia_project.Models.Implementations
 {
     internal class ShapeCommandsController
     {
-        private readonly ObservableCollection<ICommand> _commands = [];
+        private readonly ObservableCollection<ICommand> _commands = new();
         public ObservableCollection<ICommand> Commands => _commands;
 
         public void AddCommand(ICommand command)

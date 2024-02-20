@@ -8,14 +8,19 @@ using System.Collections.ObjectModel;
 
 namespace Avalonia_project.ViewModels;
 
-public class MainWindowViewModel(Shape shape) : ViewModelBase
+public class MainWindowViewModel : ViewModelBase
 {
-    private readonly Shape _shape = shape;
+    private readonly Shape _shape;
     private readonly ShapeCommandsController _commandsController = new();
 	private double _size = .5;
 	private byte _valueR;
 	private byte _valueG;
 	private byte _valueB;
+	
+	public MainWindowViewModel(Shape shape)
+	{
+		_shape = shape;
+	}
 
     public double Size
     {

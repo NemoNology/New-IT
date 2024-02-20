@@ -1,1 +1,1 @@
-# Command pattern
+# Pattern 'command'

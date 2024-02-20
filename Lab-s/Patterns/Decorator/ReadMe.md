@@ -1,1 +1,1 @@
-# Pattern 'Decorator'/'Wrapper'
+# Pattern 'decorator'/'wrapper'

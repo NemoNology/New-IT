@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://belgqphypmmtd"]
+
+[ext_resource type="PackedScene" uid="uid://k1cyq6e5c6ge" path="res://Sources/Scenes/bot_info_ui.tscn" id="1_82jgx"]
+[ext_resource type="Script" path="res://Sources/Scripts/bot.gd" id="2_28yp5"]
+[ext_resource type="Texture2D" uid="uid://b2uxggrgmaax3" path="res://icon.svg" id="3_qkl3o"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bot info UI" parent="." instance=ExtResource("1_82jgx")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -882.0
+offset_top = 131.0
+offset_right = -882.0
+offset_bottom = 131.0
+grow_horizontal = 0
+grow_vertical = 1
+bot_node_path = NodePath("../Bot")
+
+[node name="Bot" type="Node2D" parent="."]
+position = Vector2(605, 473)
+script = ExtResource("2_28yp5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bot"]
+texture = ExtResource("3_qkl3o")

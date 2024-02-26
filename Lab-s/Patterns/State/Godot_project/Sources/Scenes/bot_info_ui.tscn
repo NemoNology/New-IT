@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://k1cyq6e5c6ge"]
+
+[ext_resource type="Script" path="res://Sources/Scripts/bot_info_ui.gd" id="1_rmh6v"]
+
+[node name="Bot info UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmh6v")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 2
+
+[node name="State" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Состояние:"
+
+[node name="State value" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Hunger" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Сытость:"
+
+[node name="Hunger value" type="ProgressBar" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Thirst" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Водный баланс:"
+
+[node name="Thirst value" type="ProgressBar" parent="MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Energy" type="Label" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Бодрость:"
+
+[node name="Energy value" type="ProgressBar" parent="MarginContainer/GridContainer"]
+layout_mode = 2
